@@ -1,23 +1,23 @@
-// import Navigo from "navigo";
-// import AboutPage from "./pages/about";
-// import HomePage from "./pages/homepage";
+import Navigo from "navigo";
+import AboutPage from "./pages/about";
+import HomePage from "./pages/homepage";
 
-// const router = new Navigo("/", { linksSelector: "a" });
+const router = new Navigo("/", { linksSelector: "a" });
 
-// const render = (content) => {
-//     document.querySelector("#app").innerHTML = content.print();
-// };
+const render = (content) => {
+    document.querySelector("#app").innerHTML = content.print();
+};
 
-// router.on({
-//     "/": () => {
-//         render(HomePage);
-//     },
-//     "/about": () => {
-//         render(AboutPage);
-//     },
-// });
+router.on({
+    "/": () => {
+        render(HomePage);
+    },
+    "/about": () => {
+        render(AboutPage);
+    },
+});
 
-// router.resolve();
+router.resolve();
 
 // Cach 2
 // router.on("/", () => {
@@ -46,11 +46,3 @@
 // const tuong2 = new TuongPhep("krixi", 153, 0);
 // tuong1.showInfo();
 // console.log(tuong2.showInfo());
-
-const render = (content) => {
-    document.querySelector("#app").innerHTML = content.print();
-};
-const homepage = {
-    print: () => `<h1>Home Page</h1>`,
-};
-render(homepage);
